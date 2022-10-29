@@ -1,7 +1,7 @@
 version: "3"
 services:
   ccmc:
-    image: ghcr.io/ej-aoat/crosscrown-mc:1.0-mc1.19.2
+    image: ghcr.io/ej-aoat/crosscrown/crosscrown-mc:1.0-mc1.19.2
     build:
       context: ../../../
       dockerfile: ./app/SpigotMC/Docker/Dockerfile
