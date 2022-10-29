@@ -1,0 +1,16 @@
+version: "3"
+services:
+  ccmc:
+    image: ghcr.io/ej-aoat/crosscrown-mc:1.0-mc1.19.2
+    build:
+      context: ../../../
+      dockerfile: ./app/SpigotMC/Docker/Dockerfile
+    ports:
+      - "25565:25565"
+    environment:
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ccmc-data:/opt/ccmc
+volumes:
+  ccmc-data:
+    driver: local
