@@ -19,7 +19,7 @@ COPY app/SpigotMC/BuildTools.jar .
 ###
 # SpigotMCアプリのビルド、およびJARファイルの生成
 WORKDIR /tmp/ccmc
-RUN java -jar /build/BuildTools.jar --rev 1.19.2
+RUN java -jar /build/BuildTools.jar --rev 1.19.3
 
 ##############################################
 # SpigotMCのデプロイ
@@ -37,7 +37,7 @@ RUN apk update && \
 # SpigotMCアプリの配置
 
 WORKDIR /opt
-COPY --from=build /tmp/ccmc/spigot-1.19.2.jar .
+COPY --from=build /tmp/ccmc/spigot-1.19.3.jar .
 
 WORKDIR /opt/ccmc
 COPY app/SpigotMC/eula.txt .
